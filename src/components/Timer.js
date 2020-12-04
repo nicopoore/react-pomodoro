@@ -15,7 +15,7 @@ class Timer extends Component {
   updateTimer = () => {
     let newType = this.props.currentType === 'session' ? 'break' : 'session' 
     if (this.props.running && this.props.currentTimer > 0) {
-      let newTimer = this.props.currentTimer - 500
+      let newTimer = this.props.currentTimer - 10
       this.props.dispatch({
         type: 'UPDATE_TIMER',
         currentTimer: newTimer
