@@ -1,38 +1,127 @@
-.App {
+* {
+  box-sizing: border-box;
   text-align: center;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #D9C4EC;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: #B9A0D9;
+  border-radius: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.capitalize {
+  text-transform: capitalize;
+}
+
+#TimerButtons {
+  margin-top: 2rem;
+}
+
+.btn-one {
+  position: relative;
   color: white;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  background-color: #AA93D0;
+  border: 0px solid white;
+  outline: 0px;
+  border-radius: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-one span {
+  transition: all 0.3s;
+  transform: scale(1, 1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-one::before {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.btn-one::before {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.03);
+  transform: scale(0.1, 0.1);
+  border-radius: 50%;
+}
+
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn-one:active{
+  top:0.1em;
+}
+
+#session-length-div > *:not(h3), #break-length-div > *:not(h3) {
+  display: inline-block;
+}
+
+.timer-btn {
+  margin: 0 .6rem;
+}
+
+#session-length, #break-length {
+  width: 3.5rem;
+  font-weight: 630;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#session-length-div, #break-length-div {
+  display: inline-block;
+  width: 30%;
+  margin: 0 5%;
+}
+
+#lengths {
+  margin: 2rem 0;
+}
+
+#time-left {
+  margin: auto;
+  width: 100%;
+  height: 8rem;
+  line-height: 7.5rem;
+  user-select: none;
+}
+
+.circularProgress {
+  position: absolute;
+  left: 14.8rem;
+  top: 4.5rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+#progress-radius {
+  border: 2px solid white;
+  width: 8rem;
+  height: 8rem;
+  margin: auto;
+  border-radius: 4rem;
+}
+
+.linkedin {
+  font-weight: bold;
+  text-decoration: none;
 }
