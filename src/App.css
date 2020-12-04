@@ -11,62 +11,56 @@ body {
 }
 
 .App {
-  width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  background-color: #B9A0D9;
+  width: 600px;
   border-radius: 0.5rem;
+  background-color: #B9A0D9;
 }
 
 .capitalize {
   text-transform: capitalize;
 }
 
-
-
-#TimerButtons {
-  margin-top: 2rem;
-}
-
 /* Button */
 
 .btn-one {
   position: relative;
-  color: white;
+  transition: all 0.3s;
   width: 3rem;
   height: 3rem;
-  line-height: 3rem;
-  transition: all 0.3s;
-  font-size: 1.1rem;
-  background-color: #AA93D0;
   border: 0px solid white;
-  outline: 0px;
   border-radius: 1.5rem;
+  background-color: #AA93D0;
+  line-height: 3rem;
+  font-size: 1.1rem;
+  outline: 0px;
+  color: white;
 }
 
 .btn-one span {
-  transition: all 0.3s;
   transform: scale(1, 1);
+  transition: all 0.3s;
 }
 
 .btn-one::before {
   content: '';
   position: absolute;
-  transition: all 0.3s;
+  z-index: 1;
   bottom: 0;
   left: 0;
+  transition: all 0.3s;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 .btn-one::before {
   opacity: 0;
-  background: rgba(0, 0, 0, 0.03);
   transform: scale(0.1, 0.1);
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .btn-one:hover::before {
@@ -75,7 +69,7 @@ body {
 }
 
 .btn-one:active{
-  top:0.1em;
+  top: 0.1em;
 }
 
 /* Timer */
@@ -90,18 +84,22 @@ body {
 
 .circularProgress {
   position: absolute;
-  left: 14.8rem;
   top: 4.5rem;
+  left: 14.8rem;
   width: 8rem;
   height: 8rem;
 }
 
 #progress-radius {
+  margin: auto;
   border: 2px solid white;
+  border-radius: 4rem;
   width: 8rem;
   height: 8rem;
-  margin: auto;
-  border-radius: 4rem;
+}
+
+#TimerButtons {
+  margin-top: 2rem;
 }
 
 /* IncDec */
@@ -115,16 +113,16 @@ body {
 }
 
 #session-length, #break-length {
-  width: 3.5rem;
-  font-weight: 630;
-  font-size: 1.5rem;
   margin: 0;
+  width: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 630;
 }
 
 #session-length-div, #break-length-div {
   display: inline-block;
-  width: 30%;
   margin: 0 5%;
+  width: 30%;
 }
 
 #lengths {
@@ -143,7 +141,7 @@ body {
   /* General */
   
   .App {
-    width: 300px
+    width: 300px;
   }
 
   /* Timer */
@@ -156,7 +154,7 @@ body {
 
   #session-length-div, #break-length-div {
     display: block;
-    width: 100%;
     margin: auto;
+    width: 100%;
   }
 }
